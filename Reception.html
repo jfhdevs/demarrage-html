@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">/**
+ * Get the value of a querystring
+ * @param  {String} field The field to get the value of
+ * @param  {String} url   The URL to get the value from (optional)
+ * @return {String}       The field value
+ */
+function getParameter(field, url ) {
+    var href = url ? url : window.location.href;
+    var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+    var string = reg.exec(href);
+    return string ? string[1] : null;
+};
+
+</script>
+</head>
+<body>
+
+<p>Civilité : <script type="text/javascript">document.write(getParameter("civilite"));</script>
+<p>Nom / Prénom : <script type="text/javascript">document.write(getParameter("nomprenom"));</script>
+<p>Adresse mail : <script type="text/javascript">document.write(getParameter("email"));</script>
+<p>Adresse : <script type="text/javascript">document.write(getParameter("adresse"));</script>
+<p>N° postale / Localité : <script type="text/javascript">document.write(getParameter("codeposte"));</script>
+                           <script type="text/javascript">document.write(getParameter("localite"));</script>
+<p>Pays : <script type="text/javascript">document.write(getParameter("pays"));</script>
+<p>Plateforme(s) : <script type="text/javascript">document.write(getParameter("Windows"));</script>
+				   <script type="text/javascript">document.write(getParameter("Macintosh"));</script>
+ 				   <script type="text/javascript">document.write(getParameter("Linux"));</script>
+<p>Applications : <script type="text/javascript">document.write(getParameter("applications"));
+<form action="Formulaire.html">
+	<input TYPE="submit" NAME="soumission" VALUE="Revenir au formulaire">
+</form>
+</body>
+</html>

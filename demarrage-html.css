@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+footer li+li	{ border-left: thin solid #000000 }
+
+footer li		{ display : inline; }
+
+footer ul		{ list-style-type : none; } 
+
+#tableau		{ text-align : center;
+				  border : medium solid black; } 
+
+#left			{ text-align : left; }
+
+#right			{ text-align : right; }
+
+#rightdown		{ text-align : right;
+				  vertical-align : bottom; } 
+
+th				{ width : 30px;
+				  font-weight:normal; }
+
+th:first-child	{ width : 90px; }
+
+th,td			{ border : thin solid #000000 }

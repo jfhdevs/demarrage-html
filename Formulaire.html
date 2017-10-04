@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulaire de définition du client</title>
+<link rel="stylesheet" href="Formulaire.css" />
+</head>
+<body>
+	<form id="clientform" action="Reception.html" method="get">
+		<fieldset>
+			<legend>
+				<span class="titre">Client</span>
+			</legend>
+			<div class="ligne">
+				<div class="libelle">Civilité</div>
+				<div class="saisie">
+					<input type="radio" name="civilite" value="Mademoiselle" required="required">Mademoiselle
+					<input type="radio" name="civilite" value="Madame">Madame 
+					<input type="radio" name="civilite" value="Monsieur">Monsieur
+				</div>
+			</div>
+			<div class="ligne">
+				<div class="libelle">Nom / Prénom</div>
+				<div class="saisie">
+					<input type="text" name="nomprenom" required="required">
+				</div>
+			</div>
+			<div class="ligne">
+				<div class="libelle">Adresse mail</div>
+				<div class="saisie">
+					<input type="email" name="email" required="required">
+				</div>
+			</div>
+			<div class="ligne">
+				<div class="libelle">Adresse</div>
+				<div class="saisie">
+					<textarea name="adresse" form="clientform"></textarea>
+
+				</div>
+			</div>
+			<div class="ligne">
+				<div class="libelle">N° postale / Localité</div>
+				<div class="saisie">
+					<input type="text" maxlength="4" name="codeposte" class="codepost" pattern="[0-9]{4}" required="required"> 
+					<input type="text" name="localite" value="Lausanne" required="required">
+				</div>
+			</div>
+			<div class="ligne">
+				<div class="libelle">Pays</div>
+				<div class="saisie">
+					<select name="pays" size="1">
+						<option>Allemagne
+						<option>Autriche
+						<option>France
+						<option>Italie
+						<option>Liechtenstein
+						<option selected="selected">Suisse
+					</select>
+
+				</div>
+			</div>
+			<div class="ligne">
+				<div class="libelle">Plateforme(s)</div>
+				<div class="saisie">
+					<input type="checkbox" name="Windows" value="Windows">Windows
+					<input type="checkbox" name="Macintosh" value="Macintosh">Macintosh
+					<input type="checkbox" name="Linux" value="Linux">Linux
+
+				</div>
+			</div>
+			<div class="ligne">
+				<div class="libelle">Applications</div>
+				<div class="saisie">
+					<select multiple size="6" name="applications">
+						<option value="Bureautique">Bureautique</option>
+						<option value="DAO">DAO</option>
+						<option value="Statistiques">Statistiques</option>
+						<option value="SGBD">SGBD</option>
+						<option value="Internet">Internet</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+		<div class="validation">
+			<input TYPE="submit" NAME="soumission" VALUE="Soumettre formulaire">
+			<input TYPE="reset" NAME="effacer" VALUE="Effacer">
+		</div>
+	</form>
+</body>
+</html>

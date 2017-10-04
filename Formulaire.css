@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body		{ background-color: #fffae6; }
+form		{ width: 600px; }
+fieldset	{ border: solid; }
+legend		{ align="left"; }
+.titre		{ font-weight: bold;
+			  background-color: #ffff00; }
+div			{ margin-bottom: 10px; }
+.libelle	{ float: left;
+			  width: 200px;
+			  font-weight: bold;
+			  vertical-align: middle; }
+.saisie		{ font-weight: bold; }
+.validation	{ margin-top: 10px;
+			  float: right; }
+.codepost	{ width: 20pt; }
+/* .ligne:nth-child(even)	{ background-color: #CCC } */
+.ligne:nth-child(odd)	{ background-color: #fedbab }
